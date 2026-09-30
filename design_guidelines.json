@@ -1,0 +1,236 @@
+{
+  "project_title": "SMART HEALTH & SUPPLY CHAIN RESILIENCE — Federated AI Platform for National Health Resource Intelligence",
+  "app_type": "enterprise command centre dashboard",
+  "design_context": "National Government Healthcare Command Centre / Public Infrastructure Intelligence",
+  "target_audience": "Government Officials, State/District Health Magistrates, PHC Medical Officers, Healthcare Logistics Directors, Academic Evaluators & Panellists",
+  "theme": {
+    "default_mode": "light",
+    "supported_modes": ["light", "dark"],
+    "primary_philosophy": "Tactical Enterprise Clarity. High-density, data-driven, solid surface visual architecture with high contrast and zero unnecessary visual clutter."
+  },
+  "typography": {
+    "heading_font": "Manrope, sans-serif",
+    "body_font": "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+    "mono_font": "'JetBrains Mono', 'Fira Code', monospace",
+    "google_fonts_cdn": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap",
+    "hierarchy": {
+      "page_title": {
+        "class": "text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-slate-100",
+        "description": "Used for main page module headers and primary command title"
+      },
+      "section_heading": {
+        "class": "text-lg sm:text-xl font-bold tracking-tight text-slate-800 dark:text-slate-200",
+        "description": "Used for card headers, section titles, and map panel overlays"
+      },
+      "sub_heading": {
+        "class": "text-sm sm:text-base font-semibold text-slate-700 dark:text-slate-300",
+        "description": "Used for widget sub-titles, table column groupings, and metric descriptors"
+      },
+      "kpi_value": {
+        "class": "text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight text-slate-900 dark:text-slate-50 font-mono",
+        "description": "Large numerical readout on KPI metric cards"
+      },
+      "body": {
+        "class": "text-sm leading-relaxed text-slate-600 dark:text-slate-300",
+        "description": "Standard body text for descriptions, tables, tooltips, and log entries"
+      },
+      "caption": {
+        "class": "text-xs font-medium text-slate-500 dark:text-slate-400",
+        "description": "Used for metadata, last-synced timestamps, and secondary info"
+      },
+      "overline_label": {
+        "class": "text-[11px] font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400",
+        "description": "Eyebrow labels for category tags, status section headers, and data sources"
+      }
+    }
+  },
+  "colors": {
+    "light": {
+      "background": "#F8FAFC",
+      "surface": "#FFFFFF",
+      "surface_subtle": "#F1F5F9",
+      "border": "#E2E8F0",
+      "border_strong": "#CBD5E1",
+      "text_primary": "#0F172A",
+      "text_secondary": "#475569",
+      "text_muted": "#64748B",
+      "primary_navy": "#0B192C",
+      "primary_navy_hover": "#1E293B",
+      "brand_blue": "#1E40AF",
+      "health_green": {
+        "bg": "#ECFDF5",
+        "border": "#A7F3D0",
+        "text": "#047857",
+        "dot": "#10B981"
+      },
+      "warning_amber": {
+        "bg": "#FFFBEB",
+        "border": "#FDE68A",
+        "text": "#B45309",
+        "dot": "#F59E0B"
+      },
+      "critical_red": {
+        "bg": "#FEF2F2",
+        "border": "#FECACA",
+        "text": "#B91C1C",
+        "dot": "#EF4444"
+      },
+      "info_blue": {
+        "bg": "#EFF6FF",
+        "border": "#BFDBFE",
+        "text": "#1D4ED8",
+        "dot": "#3B82F6"
+      }
+    },
+    "dark": {
+      "background": "#090D16",
+      "surface": "#0F172A",
+      "surface_subtle": "#1E293B",
+      "border": "#334155",
+      "border_strong": "#475569",
+      "text_primary": "#F8FAFC",
+      "text_secondary": "#CBD5E1",
+      "text_muted": "#94A3B8",
+      "primary_navy": "#1E293B",
+      "health_green": {
+        "bg": "#064E3B",
+        "border": "#047857",
+        "text": "#6EE7B7",
+        "dot": "#10B981"
+      },
+      "warning_amber": {
+        "bg": "#78350F",
+        "border": "#B45309",
+        "text": "#FDE68A",
+        "dot": "#F59E0B"
+      },
+      "critical_red": {
+        "bg": "#7F1D1D",
+        "border": "#B91C1C",
+        "text": "#FCA5A5",
+        "dot": "#EF4444"
+      }
+    },
+    "forbidden_colors": ["#7351B7", "#1B93A4"]
+  },
+  "layout_and_spacing": {
+    "grid_strategy": "MODE B: High Density Command Grid",
+    "container_padding": "p-4 sm:p-6 lg:p-8",
+    "card_padding": "p-4 sm:p-5",
+    "gap_scale": "gap-4 lg:gap-6",
+    "border_radius": "rounded-lg sm:rounded-xl",
+    "shadow_style": "shadow-sm hover:shadow-md transition-shadow duration-200 border border-slate-200 dark:border-slate-800",
+    "responsive_breakpoints": {
+      "desktop_first": true,
+      "sidebar_width": "w-64 xl:w-72",
+      "header_height": "h-16",
+      "main_content_margin": "pl-0 lg:pl-64 xl:pl-72 pt-16"
+    }
+  },
+  "navigation_architecture": {
+    "top_header": {
+      "left": ["Sidebar Collapse Toggle", "National Command Hub Badge", "Global Search Input (`cmd+k`)"],
+      "center": ["State/District Selector Dropdown (e.g. National View -> Maharashtra -> Pune)", "Emergency Surge Mode Toggle Switch"],
+      "right": ["Live Sync Heartbeat Indicator ('Synced 12s ago')", "Federated AI Node Status Pill", "Notifications Bell with Counter Drawer", "User Role Switcher (National Health Director, State Nodal Officer, District Magistrate, PHC Doctor)"]
+    },
+    "persistent_left_sidebar": [
+      { "id": "overview", "label": "National Overview", "icon": "LayoutDashboard", "badge": "LIVE" },
+      { "id": "supply-chain", "label": "Supply Chain & Logistics", "icon": "Truck", "badge": null },
+      { "id": "inventory", "label": "Inventory Matrix", "icon": "Boxes", "badge": null },
+      { "id": "demand-forecast", "label": "AI Demand Forecast", "icon": "TrendingUp", "badge": "AI" },
+      { "id": "early-warnings", "label": "Early Warning System", "icon": "AlertTriangle", "badge": "14" },
+      { "id": "resource-allocation", "label": "Resource Redistribution", "icon": "ArrowLeftRight", "badge": "6 Action" },
+      { "id": "phc-network", "label": "PHC Network Directory", "icon": "Building2", "badge": "28.4k" },
+      { "id": "federated-ai", "label": "Federated AI Nodes", "icon": "Cpu", "badge": "36 States" },
+      { "id": "emergency-mode", "label": "Surge / Emergency Mode", "icon": "Siren", "badge": "HOT" },
+      { "id": "analytics", "label": "Analytics & Heatmaps", "icon": "BarChart3", "badge": null },
+      { "id": "reports", "label": "Reports & DPI Export", "icon": "FileSpreadsheet", "badge": null },
+      { "id": "settings", "label": "Settings & Audit Log", "icon": "ShieldCheck", "badge": null }
+    ]
+  },
+  "key_components_specification": {
+    "kpi_cards": {
+      "features": ["Value readout in bold font-mono", "Percentage change badge (up/down chevron)", "Sparkline line/bar chart widget", "Status dot indicator (Green/Amber/Red)", "Click to filter or drill down"],
+      "metrics": ["Total Active Stockouts", "Critical Supply Shortage PHCs", "National Medicine Reserves (Days)", "Vaccine Cold-Chain Compliance", "Federated AI Forecast Confidence", "Emergency Bed Availability Rate"]
+    },
+    "interactive_india_map": {
+      "library": "Leaflet / react-leaflet",
+      "features": [
+        "Interactive state and district polygon highlights or geo-markers",
+        "Color-coded risk circles (Green: Optimal, Amber: At-Risk, Red: Critical Stockout)",
+        "Click marker to open PHC / District Inspector drawer",
+        "Filter map by metric: Stockout Risk, Bed Occupancy, Personnel Deficit, Outbreak Warning",
+        "Zoom controls, fullscreen toggle, state boundary overlay"
+      ]
+    },
+    "supply_chain_flow": {
+      "visual": "Interactive movement visualizer with route status cards, transit ETA, cold-chain temperature logs, stock transfer table, and Recharts flow indicators"
+    },
+    "demand_forecast_chart": {
+      "library": "Recharts AreaChart / LineChart",
+      "features": [
+        "Historical vs AI Predicted Consumption line",
+        "Shaded Confidence Interval Band (95% CI)",
+        "Epidemic surge risk projections toggle",
+        "Medicine category dropdown filter (Essential Antibiotics, Maternal Care, Vaccines, ICU Consumables)"
+      ]
+    },
+    "early_warning_cards": {
+      "features": [
+        "Severity tag (Critical, High Risk, Moderate)",
+        "Risk Score percentage gauge (0-100%)",
+        "Root cause summary generated by Federated AI node",
+        "One-click 'Trigger Inter-District Transfer' or 'Escalate to State' action button"
+      ]
+    },
+    "resource_redistribution_tool": {
+      "features": [
+        "Source PHC (Surplus) -> Target PHC (Deficit) visual transfer card",
+        "Quantity calculator & estimated travel time",
+        "Approve Transfer modal with DPI digital signature simulation",
+        "Reject / Modify reallocation proposal"
+      ]
+    },
+    "federated_ai_center": {
+      "features": [
+        "Network graph or grid of 36 State & Union Territory nodes",
+        "Privacy-Preserving Training status (Local model epoch, Differential Privacy epsilon metric)",
+        "Model convergence chart and bandwidth efficiency metrics"
+      ]
+    },
+    "phc_network_directory": {
+      "features": [
+        "Advanced filterable table (by State, District, Facility Type: PHC/CHC/DH, Stock Status)",
+        "Search by PHC Name or Unique Health Facility ID (NIN)",
+        "Detail drawer / page with live staff attendance, bed count, generator fuel, oxygen cylinder status"
+      ]
+    }
+  },
+  "visual_enhancers": {
+    "surfaces": "Solid clean panels (`bg-white` or `bg-slate-900`) with precise 1px borders (`border-slate-200` or `border-slate-800`). No heavy dark gradients.",
+    "status_badges": "Pill style badges with live pulse dot indicator (`before:animate-ping`) for active emergencies",
+    "charts": "Custom Recharts tooltip with crisp shadow, formatted numbers, and contrasting grid lines (`strokeDasharray='3 3' stroke='#E2E8F0'`)",
+    "toasts": "Sonner toasts for actions (Transfer requested, Emergency mode activated, Report generated, Role switched)",
+    "skeletons": "Tailwind `animate-pulse` rectangular skeletons for seamless simulated data fetching states"
+  },
+  "image_urls": {
+    "doctors_panel": "https://images.unsplash.com/photo-1697187812068-32cd9333dadc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NDh8MHwxfHNlYXJjaHw3fHxoZWFsdGhjYXJlJTIwY2VudGVyJTIwaW5kaWElMjBkb2N0b3IlMjBzdXBwbHklMjBjaGFpbiUyMGxvZ2lzdGljc3xlbnwwfHx8fDE3OTA3NDMxNzh8MA&ixlib=rb-4.1.0&q=85",
+    "hospital_bed": "https://images.unsplash.com/photo-1778151270902-cb0ca572f2ee?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NDh8MHwxfHNlYXJjaHwxfHxoZWFsdGhjYXJlJTIwY2VudGVyJTIwaW5kaWElMjBkb2N0b3IlMjBzdXBwbHklMjBjaGFpbiUyMGxvZ2lzdGljc3xlbnwwfHx8fDE3OTA3NDMxNzh8MA&ixlib=rb-4.1.0&q=85",
+    "ambulance_dispatch": "https://images.unsplash.com/photo-1619025873875-59dfdd2bbbd6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NDh8MHwxfHNlYXJjaHw0fHxoZWFsdGhjYXJlJTIwY2VudGVyJTIwaW5kaWElMjBkb2N0b3IlMjBzdXBwbHklMjBjaGFpbiUyMGxvZ2lzdGljc3xlbnwwfHx8fDE3OTA3NDMxNzh8MA&ixlib=rb-4.1.0&q=85",
+    "phc_physician": "https://images.unsplash.com/photo-1648964388258-e71b58683ed0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NDh8MHwxfHNlYXJjaHwyfHxoZWFsdGhjYXJlJTIwY2VudGVyJTIwaW5kaWElMjBkb2N0b3IlMjBzdXBwbHklMjBjaGFpbiUyMGxvZ2lzdGljc3xlbnwwfHx8fDE3OTA3NDMxNzh8MA&ixlib=rb-4.1.0&q=85"
+  },
+  "testing_and_accessibility": {
+    "mandatory_data_testid": true,
+    "testid_convention": "kebab-case, role-based. Examples: `data-testid='sidebar-overview-link'`, `data-testid='state-filter-select'`, `data-testid='emergency-mode-toggle'`, `data-testid='approve-reallocation-btn'`, `data-testid='export-csv-btn'`, `data-testid='phc-search-input'`",
+    "contrast_ratio": "Minimum 4.5:1 for standard text against light gray or deep navy background",
+    "focus_states": "High contrast ring indicator (`focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2`)"
+  },
+  "instructions_to_main_agent": [
+    "Ensure all 12 left navigation items switch views or sub-views cleanly without blank screens.",
+    "Include synthetic realistic Indian healthcare data (e.g., states like Maharashtra, Uttar Pradesh, Kerala, Assam; medicines like Amoxicillin, Paracetamol, ORS, Snake Antivenom, Insulin; PHC IDs like PHC-MH-PUN-042).",
+    "Ensure Emergency Surge Mode transforms the UI with a glowing top alert banner and prioritizes critical red alerts.",
+    "All buttons, inputs, tables, tabs, switches, and modals MUST include `data-testid` attributes.",
+    "Use Lucide-react icons exclusively for all status indicators, navigation links, and action buttons.",
+    "Do NOT use transparent backgrounds for dropdowns, popovers, or floating headers. Use `bg-white dark:bg-slate-900` with explicit borders."
+  ]
+}
